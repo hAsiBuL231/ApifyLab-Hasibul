@@ -1,0 +1,19 @@
+import 'package:shared_preferences/shared_preferences.dart';
+
+import '../api/ApiPath.dart';
+import '../api/network/base_client.dart';
+
+class CreatePostRepository {
+  _headers(String? token) {
+    return {"Accept": "application/json", "Content-Type": "application/json", "Authorization": "Bearer $token"};
+  }
+
+  Future<void> createPost(String text) async {
+    final prefs = await SharedPreferences.getInstance();
+    String? token = prefs.getString('token');
+
+    var response = await BaseClient().post(ApiPath.createPost,
+        body: {'feed_txt': text, 'community_id': 2914, 'space_id': 5883, 'uploadType': 'text', 'activity_type': 'group', 'is_background': 0},
+        header: _headers("$token"));
+  }
+}
