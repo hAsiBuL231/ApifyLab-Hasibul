@@ -1,17 +1,55 @@
-# apifylab_hasib
+## 🛠️ Tech Stack
+- **Flutter** - Cross-platform mobile framework
+- **BLoC** - State management
+- **Dart** - Programming language
+- **REST API**
 
-A new Flutter project.
+## 🚀 Features
+- Login & Authentication
+- Newsfeed with Post Reactions
+- Post Creation
+- Logout Confirmation
 
-## Getting Started
+## 🎯 Decisions & Assumptions
+- **Comment & Reply API:** The `feed_id` was missing in the API response, so this part was skipped.
+- **Time Constraints:** Due to a short development timeline, some functionalities were skipped.
 
-This project is a starting point for a Flutter application.
+## 🔧 Installation & Setup
 
-A few resources to get you started if this is your first Flutter project:
+### Prerequisites
+- Flutter SDK installed ([Get Flutter](https://flutter.dev/docs/get-started/install))
+- Android Studio / VS Code
+- Dart SDK
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Steps to Run the Project
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-"# ApifyLab-Hasibul" 
+1. **Clone the Repository**
+2. For a specific platform:
+   Android: flutter run --release
+   iOS: flutter build ios && flutter run
+
+## 🔧 How to run the APP
+- Download the apk file
+- install the app on android device
+
+📂 Folder Structure
+lib/  
+│── api/               # Api files  
+│── bloc/              # BLoC files  
+│── components/        # Reusable Widgets   
+│── model/             # Data models  
+│── module/            # Data Store  
+│── repositories/      # API/Data fetching logic  
+│── screens/           # UI Screens  
+│── utils/             # Utilities  
+│── main.dart           # App Entry Point  
+
+📜 License
+This project is licensed under the MIT License.
+
+🤝 Contributing
+Pull requests are welcome! If you find any issues, please open an issue or contribute with a PR.
+
+✨ Author
+MD. Hasibul Hossain
+Contact: hossainhasibul2@gmail.com
